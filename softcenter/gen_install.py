@@ -26,9 +26,9 @@ def work_paths_by_walk():
     for root,subdirs,files in os.walk(parent_path):
         index += 1
         for filepath in files:
-            print os.path.join(root,filepath)
+            print(os.path.join(root,filepath))
         for sub in subdirs:
-            print os.path.join(root,sub)
+            print(os.path.join(root,sub))
 
 def work_parent():
     ignore_paths = frozenset(["maintain_files", "softcenter", "appledns", "speedtest", "dualwan", "kcptun", "koolnet", "kuainiao", "shadowvpn", "tunnel",  "phddns", "ssid", "koolproxy", "ssserver"])
@@ -104,4 +104,4 @@ else:
         gmodules["md5"] = conf["md5"]
 
         with codecs.open(os.path.join(curr_path, "app.json.js"), "w", "utf-8") as fw:
-            json.dump(gmodules, fw, sort_keys = True, indent = 4, ensure_ascii=False, encoding='utf8')
+            json.dump(gmodules, fw, sort_keys = True, indent = 4, ensure_ascii=False)
